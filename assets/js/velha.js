@@ -1,5 +1,16 @@
 let jogador = null;
+let jogadorSelecionado = document.getElementById('jogador-selecionado');
+
+mudarJogador('x');
 
 function escolherQuadrado(id) {
-    console.log(id);
+    let quadrado = document.getElementById(id)
+
+    quadrado.innerHTML = jogador;
+    quadrado.style.color = '#000';
+}
+
+function mudarJogador(valor) {
+    jogador = valor;
+    jogadorSelecionado.innerHTML = jogador;
 }
